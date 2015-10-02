@@ -1,3 +1,9 @@
 <h2 id="title">Welcome to Ember.js</h2>
 
+<p>
+  {{link-to 'Home Page' 'index'}}
+  <span>|</span>
+  {{#link-to 'todos'}}Todos Page{{/link-to}}
+</p>
+
 {{outlet}}

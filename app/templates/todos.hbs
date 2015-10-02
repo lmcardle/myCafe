@@ -1,0 +1,7 @@
+<h2 data-test-selector="todos-headding-label">I am the todos page</h2>
+
+<h3 data-test-selector="todos-list-label">My Todos</h3>
+
+{{#each modal as |todo|}}
+  <p data-test-selector="todo-model-item">{{todo.name}}</p>
+{{/each}}
