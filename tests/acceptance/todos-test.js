@@ -22,6 +22,15 @@ test('visiting /todos', function(assert) {
   });
 });
 
+test('visiting todos by clicking link', function(assert) {
+  visit('/');
+  click('#index-todo-link');
+
+  andThen(function() {
+    assert.equal(currentURL(), '/todos');
+  });
+});
+
 test('all labels are on page', function(assert) {
   visit('/todos');
 
@@ -38,7 +47,7 @@ test('all labels are on page', function(assert) {
 
 test('initial todos are displayed', function(assert) {
   let initialTodoCount = 10;
-  let server.createList('todo', initialTodoCount);
+  server.createList('todo', initialTodoCount);
   visit('/todos');
 
   andThen(function() {
